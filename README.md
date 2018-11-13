@@ -1,6 +1,6 @@
 # ITCH
 
-### The itch you don't need to scratch
+## The itch you don't need to scratch
 
 Itch is a prebuilt docker image built `FROM SCRATCH` that contains ca-certificates from alpine and a user `nobody`.
 
@@ -23,10 +23,13 @@ ENTRYPOINT ["/app"]
 ```
 
 See the example above in action
+
 - **examples/helloworld/** says Hello World and tells which user is running.
 - **examples/httpget/** Shows how ITCH differs from SCRATCH when requesting data over HTTPS.
+- **examples/timezone/** Shows how ITCH differs from SCRATCH when loading location zones.
 
 Test each of the examples with
+
 ```sh
 $ make build # builds individual scratch and itch images
 $ make run   # executes SCRATCH and ITCH versions to compare behaviour
